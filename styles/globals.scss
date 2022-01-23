@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
+body {
+    background: #f2f2f2;
+    color: #333;
+    font-family: "Nunito";
+    margin: 0;
+}
+a {
+    color: #222;
+    text-decoration: none;
+    &:hover {
+        color: salmon;
+    }
+}
+
+nav {
+    font-size: x-large;
+    font-family: "Gloria Hallelujah";
+    background-color: #aa6af5;
+    border-bottom: 1px solid #bababa;
+    width: 100%;
+    vertical-align: middle;
+    padding-bottom: 0.5%;
+    i {
+        margin-right: 12px;
+        margin-left: 18px;
+    }
+    a,
+    svg {
+        margin-left: 6px;
+        vertical-align: middle;
+        position: relative;
+        span > img {
+            float: right;
+        }
+    }
+    :hover {
+        color: rgb(255, 251, 0);
+    }
+    a.nav-home:hover {
+        .cls-1 {
+            fill: #fffe10;
+        }
+        .cls-2 {
+            fill: #c6d428;
+        }
+        .cls-3 {
+            fill: #70c8ff;
+        }
+    }
+    .cls-1 {
+        fill: #00cc6f;
+    }
+    .cls-1,
+    .cls-2,
+    .cls-3,
+    .cls-4,
+    .cls-5,
+    .cls-6 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+    }
+    .cls-2 {
+        fill: #00bd00;
+    }
+    .cls-3 {
+        fill: #c7cbff;
+    }
+    .cls-5,
+    .cls-6 {
+        fill: none;
+    }
+    .cls-5 {
+        stroke-width: 4px;
+    }
+    .cls-6 {
+        stroke-width: 3px;
+    }
+}
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 60px;
+    color: #666;
+    border-top: 1px solid #bababa;
+    .footer-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+        & > div {
+            text-align: left;
+            .icon-container {
+                display: flex;
+                flex-wrap: wrap;
+                & > * {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
+
+main {
+    margin-left: 5px;
+}
+
+.fa,
+.fab,
+.far {
+    margin-right: 5px;
+    vertical-align: middle;
+}

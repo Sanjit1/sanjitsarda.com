@@ -1,16 +1,142 @@
-html,
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
 body {
-  padding: 0;
+  background: #f2f2f2;
+  color: #333;
+  font-family: "Nunito";
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
+  color: #222;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  color: salmon;
 }
+
+nav {
+  font-size: x-large;
+  font-family: "Gloria Hallelujah";
+  background-color: #aa6af5;
+  border-bottom: 1px solid #bababa;
+  width: 100%;
+  vertical-align: middle;
+  padding-bottom: 0.5%;
+}
+
+nav i {
+  margin-right: 12px;
+  margin-left: 18px;
+}
+
+nav a,
+nav svg {
+  margin-left: 6px;
+  vertical-align: middle;
+  position: relative;
+}
+
+nav a span > img,
+nav svg span > img {
+  float: right;
+}
+
+nav :hover {
+  color: #fffb00;
+}
+
+nav a.nav-home:hover .cls-1 {
+  fill: #fffe10;
+}
+
+nav a.nav-home:hover .cls-2 {
+  fill: #c6d428;
+}
+
+nav a.nav-home:hover .cls-3 {
+  fill: #70c8ff;
+}
+
+nav .cls-1 {
+  fill: #00cc6f;
+}
+
+nav .cls-1,
+nav .cls-2,
+nav .cls-3,
+nav .cls-4,
+nav .cls-5,
+nav .cls-6 {
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+nav .cls-2 {
+  fill: #00bd00;
+}
+
+nav .cls-3 {
+  fill: #c7cbff;
+}
+
+nav .cls-5,
+nav .cls-6 {
+  fill: none;
+}
+
+nav .cls-5 {
+  stroke-width: 4px;
+}
+
+nav .cls-6 {
+  stroke-width: 3px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 60px;
+  color: #666;
+  border-top: 1px solid #bababa;
+}
+
+footer .footer-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+footer .footer-container > div {
+  text-align: left;
+}
+
+footer .footer-container > div .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .footer-container > div .icon-container > * {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+main {
+  margin-left: 5px;
+}
+
+.fa,
+.fab,
+.far {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=globals.css.map */
