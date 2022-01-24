@@ -4,6 +4,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
+npm push heroku main 
+
+pls
+
+
 ```bash
 npm run dev
 # or
