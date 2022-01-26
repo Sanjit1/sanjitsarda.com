@@ -1,0 +1,18 @@
+.project {
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 10px;
+    &:hover {
+        border-color: saddlebrown;
+    }
+    transform: translate3d(0, 0, 0);
+}
+
+.title {
+    margin: 0px;
+}
+
+.description {
+    line-height: 1.5em;
+    height: 3.5em;
+}

@@ -10,7 +10,7 @@ a {
     color: #222;
     text-decoration: none;
     &:hover {
-        color: salmon;
+        color: royalblue;
     }
 }
 
@@ -36,7 +36,7 @@ nav {
         }
     }
     :hover {
-        color: rgb(255, 251, 0);
+        //color: rgb(255, 251, 0);
     }
     a.nav-home:hover {
         .cls-1 {

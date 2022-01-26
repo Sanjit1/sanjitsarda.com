@@ -13,7 +13,7 @@ a {
 }
 
 a:hover {
-  color: salmon;
+  color: royalblue;
 }
 
 nav {
@@ -41,10 +41,6 @@ nav svg {
 nav a span > img,
 nav svg span > img {
   float: right;
-}
-
-nav :hover {
-  color: #fffb00;
 }
 
 nav a.nav-home:hover .cls-1 {

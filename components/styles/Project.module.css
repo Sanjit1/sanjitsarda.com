@@ -1,0 +1,21 @@
+.project {
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.project:hover {
+  border-color: saddlebrown;
+}
+
+.title {
+  margin: 0px;
+}
+
+.description {
+  line-height: 1.5em;
+  height: 3.5em;
+}
+/*# sourceMappingURL=Project.module.css.map */

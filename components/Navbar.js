@@ -1,14 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function Navbar() {
+    var a1 = useRef(null);
+    var a2 = useRef(null);
+    var a3 = useRef(null);
+
+    var highlight = () => {
+        anime({
+            targets: a1.current,
+            boxShadow: "0px 0px 2px 4px rgba(140,205,46,0.9)",
+            duration: 0,
+        });
+    };
+
+    var unhighlight = () => {
+        console.log(this);
+        anime({
+            targets: a1.current,
+            boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+            duration: 0,
+        });
+    };
+
     return (
         <>
             <nav className="navbar">
                 <div className="nav-container">
                     <Link href="/">
-                        <a className="nav-home">
+                        <a
+                            className="nav-home"
+                            onMouseOver={highlight}
+                            onMouseLeave={unhighlight}
+                            ref={a1}
+                        >
                             <svg
                                 id="Layer_1"
                                 data-name="Layer 1"

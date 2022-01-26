@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,WAAW;EAClC,QAAQ,EAAE,IAAI;CACjB",
+    "sources": [
+        "ProjectHolder.module.scss"
+    ],
+    "names": [],
+    "file": "ProjectHolder.module.css"
+}

@@ -16,13 +16,21 @@ export default function Portfolio() {
             <p>
                 Hi. If you want to look at some of the work on things Here are
                 some of the things I have worked on and stuff.
+            </p>
+            <ProjectHolder>
+                <Project
+                    name="Name"
+                    description="A very long description with a very long end"
+                    src="/favicon.ico"
+                    link="https://github.com/Sanjit1/"
+                />
                 <Project
                     name="Name"
                     description="Description"
-                    src="../../public/favicon.ico"
+                    src="https://avatars.githubusercontent.com/u/26168871?v=4"
                     link="https://github.com/Sanjit1/"
                 />
-            </p>
+            </ProjectHolder>
         </div>
     );
 }
