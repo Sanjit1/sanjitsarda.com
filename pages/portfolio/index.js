@@ -52,8 +52,8 @@ export default function Portfolio() {
                 />
                 <Project
                     name="sanjitsarda.com"
-                    description="A website I made because I could"
-                    src="/public/sswss.png"
+                    description="A website I made because I could."
+                    src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/public/sswss.png"
                     link="/about"
                 />
             </ProjectHolder>
