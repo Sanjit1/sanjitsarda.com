@@ -14,10 +14,9 @@ export default function Layout({ children }) {
                     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
                     crossOrigin="anonymous"
                 />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
-
-                <Script></Script>
             </Head>
+            <Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></Script>
+
             <main>{children}</main>
             <Footer />
         </div>
