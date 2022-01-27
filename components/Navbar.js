@@ -7,20 +7,71 @@ function Navbar() {
     var a2 = useRef(null);
     var a3 = useRef(null);
 
-    var highlight = () => {
+    var highlight = (target) => {
         anime({
-            targets: a1.current,
-            boxShadow: "0px 0px 2px 4px rgba(140,205,46,0.9)",
-            duration: 0,
+            targets: target.current,
+            color: "rgb(255, 251, 0)",
+            duration: 1500,
         });
     };
 
-    var unhighlight = () => {
-        console.log(this);
+    var unhighlight = (target) => {
         anime({
-            targets: a1.current,
-            boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
-            duration: 0,
+            targets: target.current,
+            color: "rgb(0, 0, 0)",
+            duration: 1500,
+        });
+    };
+
+    var a2h = () => highlight(a2);
+    var a3h = () => highlight(a3);
+
+    var a2uh = () => unhighlight(a2);
+    var a3uh = () => unhighlight(a3);
+
+    var a1h = () => {
+        anime({
+            targets: a1.current.children[1],
+            color: "rgb(255, 251, 0)",
+            duration: 1500,
+        });
+        anime({
+            targets: a1.current.children[0].getElementsByClassName("cls-1"),
+            fill: "#ff7e10",
+            duration: 1500,
+        });
+        anime({
+            targets: a1.current.children[0].getElementsByClassName("cls-2"),
+            fill: "#c6d428",
+            duration: 1500,
+        });
+        anime({
+            targets: a1.current.children[0].getElementsByClassName("cls-3"),
+            fill: "#70c8ff",
+            duration: 1500,
+        });
+    };
+    var a1uh = () => {
+        console.log(a1.current);
+        anime({
+            targets: a1.current.children[1],
+            color: "rgb(0, 0, 0)",
+            duration: 1500,
+        });
+        anime({
+            targets: a1.current.children[0].getElementsByClassName("cls-1"),
+            fill: "#00bc6f",
+            duration: 1500,
+        });
+        anime({
+            targets: a1.current.children[0].getElementsByClassName("cls-2"),
+            fill: "#00bd00",
+            duration: 1500,
+        });
+        anime({
+            targets: a1.current.children[0].getElementsByClassName("cls-3"),
+            fill: "#c7cbff",
+            duration: 1500,
         });
     };
 
@@ -31,8 +82,8 @@ function Navbar() {
                     <Link href="/">
                         <a
                             className="nav-home"
-                            onMouseOver={highlight}
-                            onMouseLeave={unhighlight}
+                            onMouseOver={a1h}
+                            onMouseLeave={a1uh}
                             ref={a1}
                         >
                             <svg
@@ -170,12 +221,12 @@ function Navbar() {
                         </a>
                     </Link>
                     <Link href="/about">
-                        <a>
+                        <a onMouseOver={a2h} onMouseLeave={a2uh} ref={a2}>
                             <i>About</i>
                         </a>
                     </Link>
                     <Link href="/portfolio">
-                        <a>
+                        <a onMouseOver={a3h} onMouseLeave={a3uh} ref={a3}>
                             <i>Portfolio</i>
                         </a>
                     </Link>

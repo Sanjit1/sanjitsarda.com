@@ -2,10 +2,22 @@
     border-style: solid;
     border-width: 2px;
     padding: 5px 10px;
+    transition: 00.8s ease;
     &:hover {
-        border-color: saddlebrown;
+        box-shadow: 0 0 8px 4px rgba(221, 10, 10, 0.89);
+        transition: 0.8s ease;
     }
     transform: translate3d(0, 0, 0);
+}
+
+.fish {
+    box-shadow: 0 0 8px 4px rgba(164, 255, 46, 0.9);
+}
+
+.image {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 .title {
@@ -15,4 +27,14 @@
 .description {
     line-height: 1.5em;
     height: 3.5em;
+}
+
+.WebDev,
+.Js,
+.Python,
+.Java,
+.Arduino,
+.IoT,
+.Cloud,
+.Discord {
 }
