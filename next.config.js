@@ -5,7 +5,9 @@ module.exports = {
             "avatars.githubusercontent.com",
             "github.com",
             "www.assets.signify.com",
+            "camo.githubusercontent.com",
             "raw.githubusercontent.com",
+            "upload.wikimedia.org",
         ],
     },
 };

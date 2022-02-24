@@ -44,7 +44,8 @@ export default function About() {
                         <Link href="/portfolio">
                             <a>portfolio</a>
                         </Link>{" "}
-                        page, if I have finished working on it.
+                        page, if I have finished working on it(which I
+                        haven't!).
                     </li>
                     <li>
                         You know me, found my website and are stalking me(why
