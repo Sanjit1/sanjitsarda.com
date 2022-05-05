@@ -217,17 +217,17 @@ function Navbar() {
                                     transform="translate(-3.14 -49.15)"
                                 />
                             </svg>
-                            <i>Sanjit1</i>
+                            <r>Sanjit1</r>
                         </a>
                     </Link>
                     <Link href="/about">
                         <a onMouseOver={a2h} onMouseLeave={a2uh} ref={a2}>
-                            <i>About</i>
+                            <r>About</r>
                         </a>
                     </Link>
                     <Link href="/portfolio">
                         <a onMouseOver={a3h} onMouseLeave={a3uh} ref={a3}>
-                            <i>Portfolio</i>
+                            <r>Portfolio</r>
                         </a>
                     </Link>
                 </div>

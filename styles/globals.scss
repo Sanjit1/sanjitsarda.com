@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anybody&family=Nunito&display=swap');
+
 body {
     background: #f2f2f2;
     color: #333;
@@ -16,13 +16,14 @@ a {
 
 nav {
     font-size: x-large;
-    font-family: "Gloria Hallelujah";
+    font-family: 'Anybody', cursive !important;
     background-color: #aa6af5;
     border-bottom: 1px solid #bababa;
     width: 100%;
     vertical-align: middle;
     padding-bottom: 0.5%;
-    i {
+    padding-top: 0.5%;
+    r {
         margin-right: 12px;
         margin-left: 18px;
     }
@@ -34,9 +35,6 @@ nav {
         span > img {
             float: right;
         }
-    }
-    :hover {
-        //color: rgb(255, 251, 0);
     }
     a.nav-home:hover {
         .cls-1 {
@@ -104,7 +102,8 @@ footer {
 }
 
 main {
-    margin-left: 5px;
+    margin-left: 7.5px;
+    margin-right: 10px;
 }
 
 .fa,
