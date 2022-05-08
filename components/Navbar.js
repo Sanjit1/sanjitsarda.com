@@ -3,89 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 function Navbar() {
-    var a1 = useRef(null);
-    var a2 = useRef(null);
-    var a3 = useRef(null);
-
-    var highlight = (target) => {
-        anime({
-            targets: target.current,
-            color: "rgb(255, 251, 0)",
-            duration: 1500,
-        });
-    };
-
-    var unhighlight = (target) => {
-        anime({
-            targets: target.current,
-            color: "rgb(0, 0, 0)",
-            duration: 1500,
-        });
-    };
-
-    var a2h = () => highlight(a2);
-    var a3h = () => highlight(a3);
-
-    var a2uh = () => unhighlight(a2);
-    var a3uh = () => unhighlight(a3);
-
-    var a1h = () => {
-        anime({
-            targets: a1.current.children[1],
-            color: "rgb(255, 251, 0)",
-            duration: 1500,
-        });
-        anime({
-            targets: a1.current.children[0].getElementsByClassName("cls-1"),
-            fill: "#ff7e10",
-            duration: 1500,
-        });
-        anime({
-            targets: a1.current.children[0].getElementsByClassName("cls-2"),
-            fill: "#c6d428",
-            duration: 1500,
-        });
-        anime({
-            targets: a1.current.children[0].getElementsByClassName("cls-3"),
-            fill: "#70c8ff",
-            duration: 1500,
-        });
-    };
-    var a1uh = () => {
-        console.log(a1.current);
-        anime({
-            targets: a1.current.children[1],
-            color: "rgb(0, 0, 0)",
-            duration: 1500,
-        });
-        anime({
-            targets: a1.current.children[0].getElementsByClassName("cls-1"),
-            fill: "#00bc6f",
-            duration: 1500,
-        });
-        anime({
-            targets: a1.current.children[0].getElementsByClassName("cls-2"),
-            fill: "#00bd00",
-            duration: 1500,
-        });
-        anime({
-            targets: a1.current.children[0].getElementsByClassName("cls-3"),
-            fill: "#c7cbff",
-            duration: 1500,
-        });
-    };
-
     return (
         <>
             <nav className="navbar">
                 <div className="nav-container">
                     <Link href="/">
-                        <a
-                            className="nav-home"
-                            onMouseOver={a1h}
-                            onMouseLeave={a1uh}
-                            ref={a1}
-                        >
+                        <a className="nav-home">
                             <svg
                                 id="Layer_1"
                                 data-name="Layer 1"
@@ -221,13 +144,29 @@ function Navbar() {
                         </a>
                     </Link>
                     <Link href="/about">
-                        <a onMouseOver={a2h} onMouseLeave={a2uh} ref={a2}>
+                        <a>
                             <r>About</r>
                         </a>
                     </Link>
                     <Link href="/portfolio">
-                        <a onMouseOver={a3h} onMouseLeave={a3uh} ref={a3}>
+                        <a>
                             <r>Portfolio</r>
+                        </a>
+                    </Link>
+                    <r className="wv"> ✲´*。.❄¨¯`*✲。❄。*。¨¯`*✲ </r>
+                    <Link href="/Music">
+                        <a>
+                            <r>Music</r>
+                        </a>
+                    </Link>
+                    <Link href="/TV">
+                        <a>
+                            <r>TV</r>
+                        </a>
+                    </Link>
+                    <Link href="/Misc">
+                        <a>
+                            <r>Misc</r>
                         </a>
                     </Link>
                 </div>

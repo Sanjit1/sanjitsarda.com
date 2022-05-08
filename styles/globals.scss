@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anybody&family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anybody&family=Nunito&display=swap");
 
 body {
     background: #f2f2f2;
@@ -16,7 +16,7 @@ a {
 
 nav {
     font-size: x-large;
-    font-family: 'Anybody', cursive !important;
+    font-family: "Anybody", cursive !important;
     background-color: #aa6af5;
     border-bottom: 1px solid #bababa;
     width: 100%;
@@ -27,6 +27,9 @@ nav {
         margin-right: 12px;
         margin-left: 18px;
     }
+    .wv {
+        color: #f2f2f2;
+    }
     a,
     svg {
         margin-left: 6px;
@@ -35,13 +38,33 @@ nav {
         span > img {
             float: right;
         }
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
     }
+
+    a:hover {
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        color: #fee61a;
+    }
+
     a.nav-home:hover {
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
         .cls-1 {
             fill: #fffe10;
         }
         .cls-2 {
-            fill: #c6d428;
+            fill: #a6c428;
         }
         .cls-3 {
             fill: #70c8ff;
@@ -58,6 +81,12 @@ nav {
     .cls-6 {
         stroke: #000;
         stroke-miterlimit: 10;
+
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
     }
     .cls-2 {
         fill: #00bd00;
