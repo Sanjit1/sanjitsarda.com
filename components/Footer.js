@@ -17,7 +17,7 @@ const Footer = () => {
                         </Link>
                     </p>
                     <p>
-                        <Link href="/imnotreadyyetlol">
+                        <Link href="https://games.sanjitsarda.com">
                             <a>Games</a>
                         </Link>
                     </p>

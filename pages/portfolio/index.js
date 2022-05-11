@@ -28,36 +28,70 @@ export default function Portfolio() {
                 everything on there, so if you want to know about some of my
                 projects, feel free to email me!
             </p>
+            <p>
+                Here is something I will try, a sorting system.(sike! later,
+                scater)
+            </p>
             <ProjectHolder>
                 <Project
                     name="Wizard Mirror"
                     description="An open source Smart Mirror for Raspberry Pi (v1 :p)."
                     src="https://github.com/Sanjit1/WizardMirror/raw/master/logo.png"
                     link="https://github.com/Sanjit1/WizardMirror"
+                    properties={{
+                        language: ["JS"],
+                        tools: ["Electron.js"],
+                        platform: ["RPi"],
+                        types: ["IOT"],
+                    }}
                 />
                 <Project
                     name="Control my lights"
                     description="A discord bot that lets you control my lights."
                     src="https://www.assets.signify.com/is/image/PhilipsLighting/154cd4be13fb4ce0b946ac6700e5b917"
                     link="https://github.com/Sanjit1/control-my-lights#control-my-lights"
+                    properties={{
+                        language: ["JS"],
+                        tools: ["Hue"],
+                        platform: ["RPi"],
+                        types: ["IOT"],
+                    }}
                 />
                 <Project
                     name="FRC Scouter"
                     description="A scouting app for FRC(that I think could probably be used for other sports too) that I made in 2019(My icon making skills have significantly improved)."
                     src="https://raw.githubusercontent.com/Sanjit1/FRCScouter/master/app/src/main/ic_launcher-web.png"
                     link="https://github.com/Sanjit1/FRCScouter"
+                    properties={{
+                        language: ["Java"],
+                        tools: [],
+                        platform: ["Android"],
+                        types: ["Tool"],
+                    }}
                 />
                 <Project
                     name="Thermistor Calibrator"
                     description="A Thermistor Calibrator I made for Science Olympiad in 2019, since online calibration was not allowed for an event: Detector Building."
                     src="https://github.com/Sanjit1/CalibratorJava/raw/master/app.png"
                     link="https://github.com/Sanjit1/"
+                    properties={{
+                        language: ["JS"],
+                        tools: ["Math.js"],
+                        platform: ["Web"],
+                        types: ["Tool"],
+                    }}
                 />
                 <Project
                     name="sanjitsarda.com"
                     description="A website I made because I could. Yea its this one."
                     src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/pages/portfolio/assets/sswss.png"
                     link="/about"
+                    properties={{
+                        language: ["JS"],
+                        tools: ["React.js", "Next.js"],
+                        platform: ["Vercel"],
+                        types: ["Bored"],
+                    }}
                 />
                 <Project
                     name="Laptop Charger"
@@ -72,12 +106,24 @@ export default function Portfolio() {
                     and stop charging it when its enough."
                     src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/public/sswss.png"
                     link="https://github.com/Sanjit1/LaptopCharger"
+                    properties={{
+                        language: ["Python"],
+                        tools: ["MQTT"],
+                        platform: ["RPi"],
+                        types: ["IOT"],
+                    }}
                 />
                 <Project
-                    name=" ​ "
-                    description=" ​ "
-                    src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/public/sswss.png"
+                    name="Games"
+                    description="A subsite of this website thats cool"
+                    src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/public/15puzzle.png"
                     link="https://www.youtube.com/watch?v=wUcUTXWu1fI"
+                    properties={{
+                        language: ["JS"],
+                        tools: ["React.js", "Next.js"],
+                        platform: ["RPi"],
+                        types: ["Bored"],
+                    }}
                 />
                 <Project
                     name="Discord Communications"
@@ -86,6 +132,12 @@ export default function Portfolio() {
                     Obviously don't use this library if you expect lots of traffic, since it is very slow."
                     src="https://camo.githubusercontent.com/68ed32620b4b09ff3305c01daa5ae0cbc63f974a3766e2cbb89c024c8ce241db/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3835373733393633363835303535363934382f3835383436343233313435353332363232392f756e6b6e6f776e2e706e67"
                     link="https://github.com/Sanjit1/discord-communications#readme"
+                    properties={{
+                        language: ["JS"],
+                        tools: ["Electron.js"],
+                        platform: ["RPi"],
+                        types: ["Bored"],
+                    }}
                 />
                 <Project
                     name=" ​ "
