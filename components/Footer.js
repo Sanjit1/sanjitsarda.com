@@ -1,10 +1,11 @@
 import Link from "next/link";
+import styles from "./styles/Footer.module.css";
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="footer-container">
-                <div className="footer-left">
+        <footer className={styles.footer}>
+            <div className={styles.footer_container}>
+                <div className={styles.footer_left}>
                     <h2>Menu</h2>
                     <p>
                         <Link href="/about">
@@ -27,7 +28,7 @@ const Footer = () => {
                         </Link>
                     </p>
                 </div>
-                <div className="footer-middle">
+                <div className={styles.footer_middle}>
                     <h2>Legal</h2>
                     <p>
                         <Link href="/privacy">
@@ -45,7 +46,7 @@ const Footer = () => {
                         </Link>
                     </p>
                 </div>
-                <div className="footer-right">
+                <div className={styles.footer_right}>
                     <h2>Contact</h2>
                     <Link href="mailto:sanjitsarda4@gmail.com">
                         <a>
@@ -56,7 +57,7 @@ const Footer = () => {
                     <br />
                     <br />
                     <br />
-                    <div className="icon-container">
+                    <div className={styles.icon_container}>
                         <Link href="https://www.linkedin.com/in/sanjitsarda/">
                             <a>
                                 <i className="fab fa-linkedin-in fa-2x"></i>

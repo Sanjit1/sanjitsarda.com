@@ -7,6 +7,7 @@
     vertical-align: middle;
     padding-bottom: 0.5%;
     padding-top: 0.5%;
+    min-height: 40px;
     r {
         margin-right: 12px;
         margin-left: 18px;
@@ -98,10 +99,31 @@
     .links,
     .wv {
         display: none;
+        &.responsive {
+            display: block;
+            margin-bottom: 20px;
+            right: 0;
+            text-align: right;
+        }
     }
     .bars {
         display: block;
         float: right;
         padding-right: 10px;
+        margin: 10px;
     }
+
+    .nav_container.responsive {
+        position: relative;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .navbar.responsive {
+        padding-bottom: 20px;
+    }
+}
+
+.responsive {
+    border: none;
 }

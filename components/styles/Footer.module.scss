@@ -1,0 +1,23 @@
+.footer {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 60px;
+    color: #666;
+    border-top: 1px solid #bababa;
+    .footer_container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+        & > div {
+            text-align: left;
+            .icon_container {
+                display: flex;
+                flex-wrap: wrap;
+                & > * {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}

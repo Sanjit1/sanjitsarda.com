@@ -5,17 +5,30 @@ import styles from "./styles/Navbar.module.css";
 
 function Navbar() {
     var [navToggled, setNavToggled] = useState(false);
+    var [containerStyle, setContainStyle] = useState(styles.nav_container);
+    var [linksStyle, setLinksStyle] = useState(styles.links);
+    var [wvStyle, setWvStyle] = useState(styles.wv);
+    var [navStyle, setNavStyle] = useState(styles.navbar);
     useEffect(() => {
+        console.log(navToggled);
         if (navToggled) {
+            setContainStyle(styles.nav_container + " " + styles.responsive);
+            setLinksStyle(styles.links + " " + styles.responsive);
+            setWvStyle(styles.wv + " " + styles.responsive);
+            setNavStyle(styles.navbar + " " + styles.responsive);
         } else {
+            setContainStyle(styles.nav_container);
+            setLinksStyle(styles.links);
+            setWvStyle(styles.wv);
+            setNavStyle(styles.navbar);
         }
     }, [navToggled]);
     return (
         <>
-            <nav className={styles.navbar}>
-                <div className={styles.nav_container}>
+            <nav className={navStyle}>
+                <div className={containerStyle}>
                     <Link href="/">
-                        <a className={styles.nav_home + " " + styles.links}>
+                        <a className={styles.nav_home + " " + linksStyle}>
                             <svg
                                 id="Layer_1"
                                 data-name="Layer 1"
@@ -151,28 +164,28 @@ function Navbar() {
                         </a>
                     </Link>
                     <Link href="/about">
-                        <a className={styles.links}>
+                        <a className={linksStyle}>
                             <r>About</r>
                         </a>
                     </Link>
                     <Link href="/portfolio">
-                        <a className={styles.links}>
+                        <a className={linksStyle}>
                             <r>Portfolio</r>
                         </a>
                     </Link>
-                    <r className={styles.wv}> ✲´*。.❄¨¯`*✲。❄。*。¨¯`*✲ </r>
+                    <r className={wvStyle}> ✲´*。.❄¨¯`*✲。❄。*。¨¯`*✲ </r>
                     <Link href="/Music">
-                        <a className={styles.links}>
+                        <a className={linksStyle}>
                             <r>Music</r>
                         </a>
                     </Link>
                     <Link href="/TV">
-                        <a className={styles.links}>
+                        <a className={linksStyle}>
                             <r>TV</r>
                         </a>
                     </Link>
                     <Link href="/Misc">
-                        <a className={styles.links}>
+                        <a className={linksStyle}>
                             <r>Misc</r>
                         </a>
                     </Link>
