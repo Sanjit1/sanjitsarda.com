@@ -1,0 +1,9 @@
+.frogs {
+    width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+    .frogs {
+        width: 300px;
+    }
+}

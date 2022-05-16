@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styles from "./../components/styles/Home.module.css";
 
 export default function Home() {
     return (
@@ -20,9 +21,10 @@ export default function Home() {
                 Oky byeeee. Ill update this place later if I feel like it.
                 <br />
                 <img
-                    src="https://thumbs.dreamstime.com/b/mating-frogs-couple-probably-rana-temporaria-common-frog-sunny-spring-day-111343718.jpg"
+                    src="https://i.chzbgr.com/full/9651115008/hD9A0E6C7/animal"
                     alt="Frogs"
                     width={500}
+                    className={styles.frogs}
                 />
                 <br />
                 Just an image of frogs I felt like adding.

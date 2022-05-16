@@ -1,0 +1,107 @@
+.navbar {
+    font-size: x-large;
+    font-family: "Anybody", cursive !important;
+    background-color: #aa6af5;
+    border-bottom: 1px solid #bababa;
+    width: 100%;
+    vertical-align: middle;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    r {
+        margin-right: 12px;
+        margin-left: 18px;
+    }
+    .wv {
+        color: #f2f2f2;
+    }
+    a,
+    svg {
+        margin-left: 6px;
+        vertical-align: middle;
+        position: relative;
+        span > img {
+            float: right;
+        }
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+    a:hover {
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        color: #fee61a;
+    }
+
+    a.nav_home:hover {
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        .cls_1 {
+            fill: #fffe10;
+        }
+        .cls_2 {
+            fill: #a6c428;
+        }
+        .cls_3 {
+            fill: #70c8ff;
+        }
+    }
+    .cls_1 {
+        fill: #00cc6f;
+    }
+    .cls_1,
+    .cls_2,
+    .cls_3,
+    .cls_4,
+    .cls_5,
+    .cls_6 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    .cls_2 {
+        fill: #00bd00;
+    }
+    .cls_3 {
+        fill: #c7cbff;
+    }
+    .cls_5,
+    .cls_6 {
+        fill: none;
+    }
+    .cls_5 {
+        stroke-width: 4px;
+    }
+    .cls_6 {
+        stroke-width: 3px;
+    }
+}
+
+.bars {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .links,
+    .wv {
+        display: none;
+    }
+    .bars {
+        display: block;
+        float: right;
+        padding-right: 10px;
+    }
+}
