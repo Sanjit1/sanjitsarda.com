@@ -1,9 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import { holder } from "./styles/ProjectHolder.module.css";
-
 function ProjectHolder({ children }) {
-    return <div className={holder}>{children}</div>;
+    const holderStyle = {
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
+        gridGap: "20px",
+    };
+    return <div style={holderStyle}>{children}</div>;
 }
 
 export default ProjectHolder;

@@ -1,13 +1,13 @@
-.project {
+.card {
     border-style: solid;
     border-width: 2px;
     padding: 5px 10px;
-    transition: 00.2s ease;
+    transition: 00.1s ease;
     &:hover {
-        box-shadow: 0 0 4px 4px rgba(221, 10, 10, 0.89);
-        transition: 0.2s ease;
+        box-shadow: 0 0 8px 4px rgba(221, 255, 10, 0.89);
+        transition: 0.3s ease;
     }
-    transform: translate3d(0, 0, 0);
+    max-width: 400px;
 }
 
 .image {
@@ -18,6 +18,7 @@
 
 .title {
     margin: 0px;
+    transition: 00.1s ease;
     &:hover {
         color: royalblue;
         transition: 0.3s ease;
@@ -28,14 +29,4 @@
 .description {
     line-height: 1.5em;
     height: 3.5em;
-}
-
-.WebDev,
-.Js,
-.Python,
-.Java,
-.Arduino,
-.IoT,
-.Cloud,
-.Discord {
 }

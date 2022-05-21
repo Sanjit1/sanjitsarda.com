@@ -1,0 +1,41 @@
+.card {
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px 10px;
+  -webkit-transition: 00.1s ease;
+  transition: 00.1s ease;
+  max-width: 400px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 8px 4px rgba(221, 255, 10, 0.89);
+          box-shadow: 0 0 8px 4px rgba(221, 255, 10, 0.89);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.image {
+  max-height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.title {
+  margin: 0px;
+  -webkit-transition: 00.1s ease;
+  transition: 00.1s ease;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: royalblue;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.description {
+  line-height: 1.5em;
+  height: 3.5em;
+}
+/*# sourceMappingURL=Card.module.css.map */

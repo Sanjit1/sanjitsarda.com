@@ -2,22 +2,17 @@
   border-style: solid;
   border-width: 2px;
   padding: 5px 10px;
-  -webkit-transition: 00.8s ease;
-  transition: 00.8s ease;
+  -webkit-transition: 00.2s ease;
+  transition: 00.2s ease;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
 .project:hover {
-  -webkit-box-shadow: 0 0 8px 4px rgba(221, 10, 10, 0.89);
-          box-shadow: 0 0 8px 4px rgba(221, 10, 10, 0.89);
-  -webkit-transition: 0.8s ease;
-  transition: 0.8s ease;
-}
-
-.fish {
-  -webkit-box-shadow: 0 0 8px 4px rgba(164, 255, 46, 0.9);
-          box-shadow: 0 0 8px 4px rgba(164, 255, 46, 0.9);
+  -webkit-box-shadow: 0 0 4px 4px rgba(221, 10, 10, 0.89);
+          box-shadow: 0 0 4px 4px rgba(221, 10, 10, 0.89);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .image {
@@ -29,6 +24,13 @@
 
 .title {
   margin: 0px;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: royalblue;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .description {
