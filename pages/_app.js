@@ -1,4 +1,3 @@
-// import "../src/fa/css/all.css";
 import "../styles/globals.css";
 import "../components/Layout";
 

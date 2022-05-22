@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
-import { card, title, description, image } from "./styles/Card.module.css";
+import styles from "./styles/Card.module.scss";
 
 /**
  * props: Card
@@ -16,25 +16,38 @@ import { card, title, description, image } from "./styles/Card.module.css";
 function Card(props) {
     const divRed = useRef(null);
     const img = useRef(null);
+    console.log(props.red);
 
-    return (
-        <>
-            <div ref={divRed} className={card}>
-                <Link href={props.link}>
-                    <h3 className={title}>{props.name}</h3>
-                </Link>
+    const mainCard = (
+        <div
+            ref={divRed}
+            style={props.style}
+            className={
+                styles.card + " " + (props.yellow ? styles.yellow : styles.red)
+            }
+        >
+            <Link href={props.link}>
+                <h3 className={styles.title}>{props.name}</h3>
+            </Link>
 
-                <p className={description}>{props.description}</p>
-                <Image
-                    ref={img}
-                    className={image}
-                    src={props.src}
-                    width={5000}
-                    height={5000}
-                />
-                <br />
-            </div>
-        </>
+            <p className={styles.description}>{props.description}</p>
+            <Image
+                ref={img}
+                className={styles.image}
+                src={props.src}
+                width={5000}
+                height={5000}
+            />
+            <br />
+        </div>
+    );
+
+    return props.linked ? (
+        <Link style={{ cursor: "pointer" }} href={props.link}>
+            {mainCard}
+        </Link>
+    ) : (
+        mainCard
     );
 }
 

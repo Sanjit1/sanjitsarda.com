@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Project from "../../components/Project";
+import Card from "../../components/Card";
 import ProjectHolder from "../../components/ProjectHolder";
 
 export default function Portfolio() {
@@ -33,7 +33,7 @@ export default function Portfolio() {
                 scater)
             </p>
             <ProjectHolder>
-                <Project
+                <Card
                     name="Wizard Mirror"
                     description="An open source Smart Mirror for Raspberry Pi (v1 :p)."
                     src="https://github.com/Sanjit1/WizardMirror/raw/master/logo.png"
@@ -44,8 +44,9 @@ export default function Portfolio() {
                         platform: ["RPi"],
                         types: ["IOT"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="Control my lights"
                     description="A discord bot that lets you control my lights."
                     src="https://www.assets.signify.com/is/image/PhilipsLighting/154cd4be13fb4ce0b946ac6700e5b917"
@@ -56,8 +57,9 @@ export default function Portfolio() {
                         platform: ["RPi"],
                         types: ["IOT"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="FRC Scouter"
                     description="A scouting app for FRC(that I think could probably be used for other sports too) that I made in 2019(My icon making skills have significantly improved)."
                     src="https://raw.githubusercontent.com/Sanjit1/FRCScouter/master/app/src/main/ic_launcher-web.png"
@@ -68,8 +70,9 @@ export default function Portfolio() {
                         platform: ["Android"],
                         types: ["Tool"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="Thermistor Calibrator"
                     description="A Thermistor Calibrator I made for Science Olympiad in 2019, since online calibration was not allowed for an event: Detector Building."
                     src="https://github.com/Sanjit1/CalibratorJava/raw/master/app.png"
@@ -80,8 +83,9 @@ export default function Portfolio() {
                         platform: ["Web"],
                         types: ["Tool"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="sanjitsarda.com"
                     description="A website I made because I could. Yea its this one."
                     src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/pages/portfolio/assets/sswss.png"
@@ -92,8 +96,9 @@ export default function Portfolio() {
                         platform: ["Vercel"],
                         types: ["Bored"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="Laptop Charger"
                     description="LaptopCharger😕(apparently thats supposed to be the confused emoji). 
                     A very tiny script that toggles an MQTT device that toggles my LaptopCharger based on how necessary it is.
@@ -112,8 +117,9 @@ export default function Portfolio() {
                         platform: ["RPi"],
                         types: ["IOT"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="Games"
                     description="A subsite of this website thats cool"
                     src="https://raw.githubusercontent.com/Sanjit1/sanjitsarda.com/main/pages/portfolio/assets/15puzzle.png"
@@ -124,8 +130,9 @@ export default function Portfolio() {
                         platform: ["RPi"],
                         types: ["Bored"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="Discord Communications"
                     description="This is a(probably very slow) communication library that uses discord to communicate between
                     clients. Its not supposed to make sense or be useful but it is very fun to look at and stuff, so why not. 
@@ -138,8 +145,9 @@ export default function Portfolio() {
                         platform: ["RPi"],
                         types: ["Bored"],
                     }}
+                    linked={true}
                 />
-                <Project
+                <Card
                     name="UCLA Class of 2026 Discord Bot"
                     description="Not much progress has been made on this, but its going(Artwork by a fellow server member)."
                     src="https://camo.githubusercontent.com/0262c6095291f94c95c8401c6e550531dfb9b5c7617a4e9c9d389ac8dd6564b0/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3831383232393932353531373539303536312f3936373837303130393635313731383136342f6a616d65732e706e67"

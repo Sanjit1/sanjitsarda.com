@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "./../components/styles/Home.module.css";
+import styles from "./../components/styles/Home.module.scss";
 import Link from "next/link";
 import Card from "../components/Card";
 
@@ -20,6 +20,7 @@ export default function Home() {
                 <br />
                 <br />
                 <Card
+                    style={{ maxWidth: "400px" }}
                     name="15 Puzzle"
                     description="A 15 Puzzle Game with a few varients"
                     src="https://raw.githubusercontent.com/Sanjit1/sanjitsarda.com/main/pages/portfolio/assets/15puzzle.png"
@@ -30,6 +31,8 @@ export default function Home() {
                         platform: ["RPi"],
                         types: ["Bored"],
                     }}
+                    linked={true}
+                    yellow={true}
                 />
                 <br />
                 <img
