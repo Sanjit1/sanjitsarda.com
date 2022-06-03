@@ -15,7 +15,6 @@ export default function Layout({ children }) {
                     crossOrigin="anonymous"
                 />
             </Head>
-            <Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></Script>
 
             <main>{children}</main>
             <Footer />

@@ -16,7 +16,6 @@ import styles from "./styles/Card.module.scss";
 function Card(props) {
     const divRed = useRef(null);
     const img = useRef(null);
-    console.log(props.red);
 
     const mainCard = (
         <div
