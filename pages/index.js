@@ -7,10 +7,15 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>Sanjit1</title>
+                <title>Sanjit's Home</title>
+                <meta name="robots" content="index, follow" />
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
+                />
+                <meta
+                    name="description"
+                    content="Homepage of Sanjit Sarda's website: The funnest personal website on planet Earth."
                 />
             </Head>
             <h1>Home?</h1>

@@ -10,6 +10,11 @@ export default function About() {
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
+                <meta name="robots" content="index, follow" />
+                <meta
+                    name="description"
+                    content="About Page of Sanjit Sarda's website: I do not know why I am indexing this."
+                />
             </Head>
             <h1>About</h1>
             <p>

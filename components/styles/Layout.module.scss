@@ -1,0 +1,13 @@
+.accept {
+    background: #aea680 !important;
+    color: #af1000 !important;
+    font-size: 13px !important;
+    border-radius: 5px !important;
+    padding: 7.5px 10px !important;
+}
+
+@media screen and (max-width: 800px) {
+    .accept {
+        font-size: 16px !important;
+    }
+}

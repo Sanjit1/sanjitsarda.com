@@ -9,6 +9,11 @@ export default function Fish() {
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
+                <meta name="robots" content="index, follow" />
+                <meta
+                    name="description"
+                    content="Fish Page of Sanjit Sarda's website: Fish frogs with shrimp and cheese."
+                />
             </Head>
             <h1>FISH</h1>
             <p style={{ margin: "1px" }}>

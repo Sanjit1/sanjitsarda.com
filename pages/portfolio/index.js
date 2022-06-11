@@ -12,6 +12,11 @@ export default function Portfolio() {
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
+                <meta name="robots" content="index, follow" />
+                <meta
+                    name="description"
+                    content="Portfolio Page of Sanjit Sarda's website: This shows my projects."
+                />
             </Head>
             <h1>Portfolio</h1>
             <p>

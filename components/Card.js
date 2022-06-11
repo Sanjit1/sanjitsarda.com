@@ -32,6 +32,7 @@ function Card(props) {
             <p className={styles.description}>{props.description}</p>
             <Image
                 ref={img}
+                alt={props.name}
                 className={styles.image}
                 src={props.src}
                 width={5000}

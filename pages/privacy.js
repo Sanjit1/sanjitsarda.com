@@ -9,6 +9,11 @@ export default function Privacy() {
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
+                <meta name="robots" content="index, follow" />
+                <meta
+                    name="description"
+                    content="Privacy Policy Page of Sanjit Sarda's website: This details my privacy policy."
+                />
             </Head>
             <h1>Privacy Policy</h1>
             <p>Last updated: January 21st, 2022</p>
