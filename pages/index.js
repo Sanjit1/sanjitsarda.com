@@ -1,6 +1,5 @@
 import Head from "next/head";
-import styles from "./../components/styles/Home.module.scss";
-import Link from "next/link";
+import styles from "./../styles/Home.module.scss";
 import Card from "../components/Card";
 
 export default function Home() {

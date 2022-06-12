@@ -1,8 +1,6 @@
 import Link from "next/link";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import Head from "next/head";
-import Script from "next/script";
 import styles from "./styles/Card.module.scss";
 
 /**
