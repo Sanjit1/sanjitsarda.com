@@ -153,8 +153,8 @@ export default function Portfolio() {
                     linked={true}
                 />
                 <Card
-                    name="UCLA Class of 2026 Discord Bot"
-                    description="Not much progress has been made on this, but its going(Artwork by a fellow server member)."
+                    name="JamesBot  "
+                    description="A bot for UCLA Co26's discord server. It is a work in progress, but it has some cool features like counting, events, and a few other things."
                     src="https://camo.githubusercontent.com/0262c6095291f94c95c8401c6e550531dfb9b5c7617a4e9c9d389ac8dd6564b0/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3831383232393932353531373539303536312f3936373837303130393635313731383136342f6a616d65732e706e67"
                     link="https://github.com/Sanjit1/Co26UCLAbot"
                 />
