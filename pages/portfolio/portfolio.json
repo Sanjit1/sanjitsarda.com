@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Wizard Mirror",
-            "image": "/portfolio/assets/WizardMirror.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/WizardMirror.png",
             "description": "A smart mirror that displays the weather, time, and news.",
             "link": "https://github.com/Sanjit1/WizardMirror",
             "properties": {
@@ -16,7 +16,7 @@
         {
             "id": 2,
             "name": "VeoPixels",
-            "image": "/portfolio/assets/Veopixels.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/Veopixels.png",
             "description": "A library that I made for controlling neopixels with an FPGA.",
             "link": "https://github.com/Sanjit1/VeoPixels#readme",
             "properties": {
@@ -29,7 +29,7 @@
         {
             "id": 3,
             "name": "Control my lights",
-            "image": "/portfolio/assets/ControlMyLights.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/ControlMyLights.png",
             "description": "A discord bot that lets you control my lights.",
             "link": "https://github.com/Sanjit1/control-my-lights",
             "properties": {
@@ -42,7 +42,7 @@
         {
             "id": 4,
             "name": "FRC Scouter",
-            "image": "/portfolio/assets/FRCScouter.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/FRCScouter.png",
             "description": "A scouting app for FRC(that I think could probably be used for other sports too) that I made in 2019(My icon making skills have significantly improved).",
             "link": "https://github.com/Sanjit1/FRCScouter",
             "properties": {
@@ -55,7 +55,7 @@
         {
             "id": 5,
             "name": "Thermistor Calibrator",
-            "image": "/portfolio/assets/ThermistorCalibrator.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/ThermistorCalibrator.png",
             "description": "A Thermistor Calibrator I made for Science Olympiad in 2019, since online calibration was not allowed for an event: Detector Building.",
             "link": "https://github.com/Sanjit1/CalibratorJava",
             "properties": {
@@ -68,7 +68,7 @@
         {
             "id": 6,
             "name": "sanjitsarda.com",
-            "image": "/portfolio/assets/sanjitsarda.com.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/sanjitsarda.com.png",
             "description": "A website I made because I could. Yea its this one.",
             "link": "/about",
             "properties": {
@@ -81,7 +81,7 @@
         {
             "id": 7,
             "name": "Laptop Charger",
-            "image": "/portfolio/assets/LaptopCharger.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/LaptopCharger.png",
             "description": "LaptopCharger😕(apparently thats supposed to be the confused emoji). A very tiny script that toggles an MQTT device that toggles my LaptopCharger based on how necessary it is. Why did I make this? - time for story time with Sanjit(I hope you realize that I am not boasting about a simple thingie, but I dont have an image lol and I really need to fill this space). For a computer person, I have not taken much good care of my computer. At some point in time, my battery started lasting 1 hour, then 30 mins, and then school was going back in person so I needed a laptop that would not die, and got the battery replaced. I realized that my laptop was old enough to take care of itself, so I gave it a set of instructions: telling it to charge my laptop when there is not enough charge and stop charging it when its enough.",
             "link": "https://github.com/Sanjit1/LaptopCharger",
             "properties": {
@@ -94,7 +94,7 @@
         {
             "id": 8,
             "name": "Games",
-            "image": "/portfolio/assets/15puzzle.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/15puzzle.png",
             "description": "A sub-site of this website thats cool",
             "link": "https://games.sanjitsarda.com/15puzzle",
             "properties": {
@@ -107,7 +107,7 @@
         {
             "id": 9,
             "name": "Discord Communications",
-            "image": "/portfolio/assets/DiscordCommunications.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/DiscordCommunications.png",
             "description": "This is a(probably very slow) communication library that uses discord to communicate between clients. Its",
             "link": "https://github.com/Sanjit1/discord-communications#readme",
             "properties": {
@@ -120,7 +120,7 @@
         {
             "id": 10,
             "name": "James Bot",
-            "image": "/portfolio/assets/JamesBot.png",
+            "image": "https://sanjitsarda.com/portfolio/assets/JamesBot.png",
             "description": "A bot for UCLA Co26's discord server. It is a work in progress, but it has some cool features like counting, events, and a few other things.",
             "link": "https://github.com/Sanjit1/JamesBot#readme",
             "properties": {
