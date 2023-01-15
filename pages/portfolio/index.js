@@ -30,24 +30,68 @@ export default function Portfolio() {
         setProjects(res.projects);
     }, []);
 
+    useEffect(() => {
+        // We want to use a temporary array to copy the projects array
+        let tempProjects = JSON.parse(JSON.stringify(res.projects));
+        console.log("filter changed");
+        console.log(res.projects);
+        console.log(tempProjects);
+        // We will use this to search, filter, and sort the projects
+        // First we will filter
+        // We want to track search and the filters and re-filter the projects array if they change
+        const filterProjects = (filterName) => {
+            if (filter[filterName].length > 0) {
+                return project.properties[filterName].some((item) =>
+                    filter[filterName].includes(item)
+                );
+            } else {
+                return true;
+            }
+        };
+
+        console.log(tempProjects);
+
+        tempProjects = tempProjects.filter((project) => {
+            // We want to return true if it meets a few conditions
+            // 1. The name or description contains the search string (if search is not empty)
+            // 2. For each of the filters, the project's filter array contains any of the filter.filter array (if the filter.filter array is not empty)
+            // We can tell that all the filter functions are the same, so we can make a function to do it for us
+            return (
+                (search == "" ||
+                    project.name.toLowerCase().includes(search.toLowerCase()) ||
+                    project.description
+                        .toLowerCase()
+                        .includes(search.toLowerCase())) &&
+                filterProjects("language") &&
+                filterProjects("tools") &&
+                filterProjects("platform") &&
+                filterProjects("types")
+            );
+        });
+        // finally, we want to sort the projects
+        if (sort == "name") {
+            if (sortOrder == "asc") {
+                tempProjects = tempProjects.sort((a, b) =>
+                    a.name.localeCompare(b.name)
+                );
+            } else {
+                tempProjects = tempProjects.sort((a, b) =>
+                    b.name.localeCompare(a.name)
+                );
+            }
+        } else if (sort == "id") {
+            if (sortOrder == "asc") {
+                tempProjects = tempProjects.sort((a, b) => a.id - b.id);
+            } else {
+                tempProjects = tempProjects.sort((a, b) => b.id - a.id);
+            }
+        }
+        setProjects(tempProjects);
+        console.log(tempProjects);
+    }, [search, filter, sort, sortOrder]);
+
     const handleSearch = (e) => {
         setSearch(e.target.value);
-        if (e.target.value === "") {
-            setProjects(res.projects);
-        } else {
-            setProjects(
-                res.projects.filter((project) => {
-                    return (
-                        project.name
-                            .toLowerCase()
-                            .includes(e.target.value.toLowerCase()) ||
-                        project.description
-                            .toLowerCase()
-                            .includes(e.target.value.toLowerCase())
-                    );
-                })
-            );
-        }
     };
 
     // We want to track sort and sortOrder and re-arange the projects array if they change
