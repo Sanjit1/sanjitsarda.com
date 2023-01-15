@@ -1,13 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
 import Card from "../../components/Card";
-import { TextInput, Group, UnstyledButton } from "@mantine/core";
+import { TextInput, Group, UnstyledButton, MultiSelect } from "@mantine/core";
 import ProjectHolder from "../../components/ProjectHolder";
 import {
     IconSearch,
     IconSelector,
     IconChevronDown,
     IconChevronUp,
+    IconCaretDown,
+    IconCaretUp,
 } from "@tabler/icons";
 import { useState, useEffect } from "react";
 import res from "./portfolio.json";
@@ -17,29 +19,69 @@ export default function Portfolio() {
     const [search, setSearch] = useState("");
     const [sort, setSort] = useState("");
     const [sortOrder, setSortOrder] = useState("");
+    const [filterProperties, setFilterProperties] = useState({
+        languages: [],
+        frameworks: [],
+        platforms: [],
+        types: [],
+    });
     const [filter, setFilter] = useState({
-        language: [],
-        tools: [],
-        platform: [],
+        languages: [],
+        frameworks: [],
+        platforms: [],
         types: [],
     });
 
     useEffect(() => {
         // Fetch projects from json file
-        // projects is {projects: [{name: "name", description: "description", src: "src", link: "link", properties: {language: [], tools: [], platform: [], types: []}}]}
+        // projects is {projects: [{name: "name", description: "description", src: "src", link: "link", properties: {languages: [], frameworks: [], platforms: [], types: []}}]}
         setProjects(res.projects);
+        // We want to get all the possible filter properties
+        setFilterProperties({
+            languages: [
+                ...new Set(
+                    res.projects
+                        .map((project) => project.properties.languages)
+                        .flat()
+                ),
+            ],
+            frameworks: [
+                ...new Set(
+                    res.projects
+                        .map((project) => project.properties.frameworks)
+                        .flat()
+                ),
+            ],
+            platforms: [
+                ...new Set(
+                    res.projects
+                        .map((project) => project.properties.platforms)
+                        .flat()
+                ),
+            ],
+            types: [
+                ...new Set(
+                    res.projects
+                        .map((project) => project.properties.types)
+                        .flat()
+                ),
+            ],
+        });
     }, []);
+
+    useEffect(() => {
+        console.log(filterProperties);
+    }, [filterProperties]);
 
     useEffect(() => {
         // We want to use a temporary array to copy the projects array
         let tempProjects = JSON.parse(JSON.stringify(res.projects));
         console.log("filter changed");
-        console.log(res.projects);
-        console.log(tempProjects);
+        console.log(filter);
         // We will use this to search, filter, and sort the projects
         // First we will filter
         // We want to track search and the filters and re-filter the projects array if they change
-        const filterProjects = (filterName) => {
+        const filterProjects = (project, filterName) => {
             if (filter[filterName].length > 0) {
                 return project.properties[filterName].some((item) =>
                     filter[filterName].includes(item)
@@ -62,10 +104,10 @@ export default function Portfolio() {
                     project.description
                         .toLowerCase()
                         .includes(search.toLowerCase())) &&
-                filterProjects("language") &&
-                filterProjects("tools") &&
-                filterProjects("platform") &&
-                filterProjects("types")
+                filterProjects(project, "languages") &&
+                filterProjects(project, "frameworks") &&
+                filterProjects(project, "platforms") &&
+                filterProjects(project, "types")
             );
         });
         // finally, we want to sort the projects
@@ -143,8 +185,8 @@ export default function Portfolio() {
                 projects, feel free to email me!
             </p>
             <p>
-                Here is something I will try, a sorting system.(sike! later,
-                scater)
+                Here is something I will try, a sorting system. Wow this took
+                time to make.
             </p>
 
             <TextInput
@@ -163,7 +205,7 @@ export default function Portfolio() {
                 What we want is a list of projects, each with a name, description, image, link, and properties.
                 In the UI, we will have a bar for filtering and sorting.
                 We can use | Icon, Property | for sorting: name, id
-                We can use | Icon, Property | for filtering: language, tools, platform, types
+                We can use | Icon, Property | for filtering: languages, frameworks, platforms, types
                 There will be a dropdown for filtering, when you click on the filter, it will show a list of all the properties.
             */}
 
@@ -181,6 +223,7 @@ export default function Portfolio() {
                         alignItems: "center",
                         display: "flex",
                         justifyContent: "space-between",
+                        flexGrow: 1,
                     }}
                     onClick={() => {
                         if (sort === "id") {
@@ -212,7 +255,15 @@ export default function Portfolio() {
                     }}
                 >
                     <IdSortIcon />
-                    <l>Id</l>
+                    <l
+                        style={{
+                            flexGrow: 1,
+                            textAlign: "left",
+                            marginLeft: "0.5rem",
+                        }}
+                    >
+                        Id
+                    </l>
                 </UnstyledButton>
 
                 <UnstyledButton
@@ -220,6 +271,7 @@ export default function Portfolio() {
                         alignItems: "center",
                         display: "flex",
                         justifyContent: "space-between",
+                        flexGrow: 1,
                     }}
                     onClick={() => {
                         if (sort === "name") {
@@ -251,9 +303,89 @@ export default function Portfolio() {
                     }}
                 >
                     <NameSortIcon />
-                    <l>Name</l>
+                    <l
+                        style={{
+                            flexGrow: 1,
+                            textAlign: "left",
+                            marginLeft: "0.5rem",
+                        }}
+                    >
+                        Name
+                    </l>
                 </UnstyledButton>
                 {/* Those were our Sorters, we now need filters */}
+                <MultiSelect
+                    style={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        flexGrow: 1,
+                    }}
+                    data={filterProperties.languages}
+                    placeholder="Languages"
+                    clearable={true}
+                    onChange={(e) => {
+                        console.log(e);
+                        setFilter({
+                            ...filter,
+                            languages: e,
+                        });
+                    }}
+                />
+                <MultiSelect
+                    style={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        flexGrow: 1,
+                    }}
+                    data={filterProperties.frameworks}
+                    placeholder="Frameworks"
+                    clearable={true}
+                    onChange={(e) => {
+                        console.log(e);
+                        setFilter({
+                            ...filter,
+                            frameworks: e,
+                        });
+                    }}
+                />
+                <MultiSelect
+                    style={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        flexGrow: 1,
+                    }}
+                    data={filterProperties.platforms}
+                    placeholder="Platforms"
+                    clearable={true}
+                    onChange={(e) => {
+                        console.log(e);
+                        setFilter({
+                            ...filter,
+                            platforms: e,
+                        });
+                    }}
+                />
+                <MultiSelect
+                    style={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        flexGrow: 1,
+                    }}
+                    data={filterProperties.types}
+                    placeholder="Types"
+                    clearable={true}
+                    onChange={(e) => {
+                        console.log(e);
+                        setFilter({
+                            ...filter,
+                            types: e,
+                        });
+                    }}
+                />
             </div>
 
             <br />

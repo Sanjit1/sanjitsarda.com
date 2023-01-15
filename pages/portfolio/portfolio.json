@@ -9,8 +9,8 @@
             "properties": {
                 "languages": ["JS"],
                 "frameworks": ["Electron.js"],
-                "platform": ["Raspberry Pi"],
-                "type": ["IOT"]
+                "platforms": ["Raspberry Pi"],
+                "types": ["IOT"]
             }
         },
         {
@@ -22,8 +22,8 @@
             "properties": {
                 "languages": ["Verilog"],
                 "frameworks": [],
-                "platform": ["FPGA"],
-                "type": ["Bored"]
+                "platforms": ["FPGA"],
+                "types": ["Bored"]
             }
         },
         {
@@ -35,8 +35,8 @@
             "properties": {
                 "languages": ["JS", "Python"],
                 "frameworks": ["Hue"],
-                "platform": ["Raspberry Pi"],
-                "type": ["IOT"]
+                "platforms": ["Raspberry Pi"],
+                "types": ["IOT"]
             }
         },
         {
@@ -48,8 +48,8 @@
             "properties": {
                 "languages": ["Java"],
                 "frameworks": [],
-                "platform": ["Android"],
-                "type": ["Tool"]
+                "platforms": ["Android"],
+                "types": ["Tool"]
             }
         },
         {
@@ -61,8 +61,8 @@
             "properties": {
                 "languages": ["Java", "JS"],
                 "frameworks": ["Math.js"],
-                "platform": ["Web"],
-                "type": ["Tool"]
+                "platforms": ["Web"],
+                "types": ["Tool"]
             }
         },
         {
@@ -74,8 +74,8 @@
             "properties": {
                 "languages": ["JS"],
                 "frameworks": ["React.js", "Next.js"],
-                "platform": ["Vercel"],
-                "type": ["Bored"]
+                "platforms": ["Vercel"],
+                "types": ["Bored"]
             }
         },
         {
@@ -87,8 +87,8 @@
             "properties": {
                 "languages": ["Python"],
                 "frameworks": ["MQTT"],
-                "platform": ["RPi"],
-                "type": ["IOT"]
+                "platforms": ["RPi"],
+                "types": ["IOT"]
             }
         },
         {
@@ -100,8 +100,8 @@
             "properties": {
                 "languages": ["JS"],
                 "frameworks": ["React.js", "Next.js"],
-                "platform": ["RPi"],
-                "type": ["Bored"]
+                "platforms": ["RPi"],
+                "types": ["Bored"]
             }
         },
         {
@@ -113,8 +113,8 @@
             "properties": {
                 "languages": ["JS"],
                 "frameworks": ["Electron.js"],
-                "platform": ["RPi"],
-                "type": ["Bored"]
+                "platforms": ["RPi"],
+                "types": ["Bored"]
             }
         },
         {
@@ -126,8 +126,8 @@
             "properties": {
                 "languages": ["JS"],
                 "frameworks": ["Discord.js"],
-                "platform": ["RPi"],
-                "type": ["Bored"]
+                "platforms": ["RPi"],
+                "types": ["Bored"]
             }
         }
     ]
