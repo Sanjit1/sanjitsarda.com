@@ -8,6 +8,7 @@ module.exports = {
             "camo.githubusercontent.com",
             "raw.githubusercontent.com",
             "upload.wikimedia.org",
+            "sanjitsarda.com",
         ],
     },
 };
