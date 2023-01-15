@@ -1,9 +1,74 @@
 import Head from "next/head";
 import Link from "next/link";
 import Card from "../../components/Card";
+import { TextInput, Group, UnstyledButton } from "@mantine/core";
 import ProjectHolder from "../../components/ProjectHolder";
+import {
+    IconSearch,
+    IconSelector,
+    IconChevronDown,
+    IconChevronUp,
+} from "@tabler/icons";
+import { useState, useEffect } from "react";
+import res from "./portfolio.json";
 
 export default function Portfolio() {
+    const [projects, setProjects] = useState([]);
+    const [search, setSearch] = useState("");
+    const [sort, setSort] = useState("");
+    const [sortOrder, setSortOrder] = useState("");
+    const [filter, setFilter] = useState({
+        language: [],
+        tools: [],
+        platform: [],
+        types: [],
+    });
+
+    useEffect(() => {
+        // Fetch projects from json file
+        // projects is {projects: [{name: "name", description: "description", src: "src", link: "link", properties: {language: [], tools: [], platform: [], types: []}}]}
+        setProjects(res.projects);
+    }, []);
+
+    const handleSearch = (e) => {
+        setSearch(e.target.value);
+        if (e.target.value === "") {
+            setProjects(res.projects);
+        } else {
+            setProjects(
+                res.projects.filter((project) => {
+                    return (
+                        project.name
+                            .toLowerCase()
+                            .includes(e.target.value.toLowerCase()) ||
+                        project.description
+                            .toLowerCase()
+                            .includes(e.target.value.toLowerCase())
+                    );
+                })
+            );
+        }
+    };
+
+    // We want to track sort and sortOrder and re-arange the projects array if they change
+
+    // We want to create two things: nameSortIcon and idSortIcon
+    // They will be IconChevronUp or IconChevronDown depending on the sort order and IconSelector if the sort is not on that property
+    const NameSortIcon =
+        sort === "name"
+            ? sortOrder === "asc"
+                ? IconChevronUp
+                : IconChevronDown
+            : IconSelector;
+    const IdSortIcon =
+        sort === "id"
+            ? sortOrder === "asc"
+                ? IconChevronUp
+                : IconChevronDown
+            : IconSelector;
+
+    // when we first load the page, we want to sort by id and desc
+
     return (
         <div>
             <Head>
@@ -37,127 +102,132 @@ export default function Portfolio() {
                 Here is something I will try, a sorting system.(sike! later,
                 scater)
             </p>
+
+            <TextInput
+                type="text"
+                name="search"
+                id="search"
+                value={search}
+                icon={<IconSearch />}
+                onChange={handleSearch}
+            />
+
+            <br />
+
+            {/* 
+                Add filtering and sorting here 
+                What we want is a list of projects, each with a name, description, image, link, and properties.
+                In the UI, we will have a bar for filtering and sorting.
+                We can use | Icon, Property | for sorting: name, id
+                We can use | Icon, Property | for filtering: language, tools, platform, types
+                There will be a dropdown for filtering, when you click on the filter, it will show a list of all the properties.
+            */}
+
+            {/* We can use a table to separate stuff */}
+            <div
+                style={{
+                    alignItems: "center",
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    width: "100%",
+                }}
+            >
+                <UnstyledButton
+                    style={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "space-between",
+                    }}
+                    onClick={() => {
+                        if (sort === "id") {
+                            setSort("id");
+                            if (sortOrder === "asc") {
+                                setSortOrder("desc");
+                                setProjects(
+                                    res.projects.sort((a, b) => {
+                                        return b.id - a.id;
+                                    })
+                                );
+                            } else {
+                                setSortOrder("asc");
+                                setProjects(
+                                    res.projects.sort((a, b) => {
+                                        return a.id - b.id;
+                                    })
+                                );
+                            }
+                        } else {
+                            setSort("id");
+                            setSortOrder("asc");
+                            setProjects(
+                                res.projects.sort((a, b) => {
+                                    return a.id - b.id;
+                                })
+                            );
+                        }
+                    }}
+                >
+                    <IdSortIcon />
+                    <l>Id</l>
+                </UnstyledButton>
+
+                <UnstyledButton
+                    style={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "space-between",
+                    }}
+                    onClick={() => {
+                        if (sort === "name") {
+                            setSort("name");
+                            if (sortOrder === "asc") {
+                                setSortOrder("desc");
+                                setProjects(
+                                    res.projects.sort((a, b) => {
+                                        return b.name.localeCompare(a.name);
+                                    })
+                                );
+                            } else {
+                                setSortOrder("asc");
+                                setProjects(
+                                    res.projects.sort((a, b) => {
+                                        return a.name.localeCompare(b.name);
+                                    })
+                                );
+                            }
+                        } else {
+                            setSort("name");
+                            setSortOrder("desc");
+                            setProjects(
+                                res.projects.sort((a, b) => {
+                                    return b.name.localeCompare(a.name);
+                                })
+                            );
+                        }
+                    }}
+                >
+                    <NameSortIcon />
+                    <l>Name</l>
+                </UnstyledButton>
+                {/* Those were our Sorters, we now need filters */}
+            </div>
+
+            <br />
+
             <ProjectHolder>
-                <Card
-                    name="Wizard Mirror"
-                    description="An open source Smart Mirror for Raspberry Pi (v1 :p)."
-                    src="https://github.com/Sanjit1/WizardMirror/raw/master/logo.png"
-                    link="https://github.com/Sanjit1/WizardMirror"
-                    properties={{
-                        language: ["JS"],
-                        tools: ["Electron.js"],
-                        platform: ["RPi"],
-                        types: ["IOT"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="Control my lights"
-                    description="A discord bot that lets you control my lights."
-                    src="https://www.assets.signify.com/is/image/PhilipsLighting/154cd4be13fb4ce0b946ac6700e5b917"
-                    link="https://github.com/Sanjit1/control-my-lights#control-my-lights"
-                    properties={{
-                        language: ["JS"],
-                        tools: ["Hue"],
-                        platform: ["RPi"],
-                        types: ["IOT"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="FRC Scouter"
-                    description="A scouting app for FRC(that I think could probably be used for other sports too) that I made in 2019(My icon making skills have significantly improved)."
-                    src="https://raw.githubusercontent.com/Sanjit1/FRCScouter/master/app/src/main/ic_launcher-web.png"
-                    link="https://github.com/Sanjit1/FRCScouter"
-                    properties={{
-                        language: ["Java"],
-                        tools: [],
-                        platform: ["Android"],
-                        types: ["Tool"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="Thermistor Calibrator"
-                    description="A Thermistor Calibrator I made for Science Olympiad in 2019, since online calibration was not allowed for an event: Detector Building."
-                    src="https://github.com/Sanjit1/CalibratorJava/raw/master/app.png"
-                    link="https://github.com/Sanjit1/"
-                    properties={{
-                        language: ["JS"],
-                        tools: ["Math.js"],
-                        platform: ["Web"],
-                        types: ["Tool"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="sanjitsarda.com"
-                    description="A website I made because I could. Yea its this one."
-                    src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/pages/portfolio/assets/sswss.png"
-                    link="/about"
-                    properties={{
-                        language: ["JS"],
-                        tools: ["React.js", "Next.js"],
-                        platform: ["Vercel"],
-                        types: ["Bored"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="Laptop Charger"
-                    description="LaptopCharger😕(apparently thats supposed to be the confused emoji). 
-                    A very tiny script that toggles an MQTT device that toggles my LaptopCharger based on how necessary it is.
-                    Why did I make this? - time for story time with Sanjit(I hope you realize that I am not boasting about
-                    a simple thingie, but I dont have an image lol and I really need to fill this space). 
-                    For a computer person, I have not taken much good care of my computer. At some point 
-                    in time, my battery started lasting 1 hour, then 30 mins, and then school was going back in person
-                    so I needed a laptop that would not die, and got the battery replaced. I realized that my laptop was old enough
-                    to take care of itself, so I gave it a set of instructions: telling it to charge my laptop when there is not enough charge
-                    and stop charging it when its enough."
-                    src="https://github.com/Sanjit1/sanjitsarda.com/raw/main/public/sswss.png"
-                    link="https://github.com/Sanjit1/LaptopCharger"
-                    properties={{
-                        language: ["Python"],
-                        tools: ["MQTT"],
-                        platform: ["RPi"],
-                        types: ["IOT"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="Games"
-                    description="A subsite of this website thats cool"
-                    src="https://raw.githubusercontent.com/Sanjit1/sanjitsarda.com/main/pages/portfolio/assets/15puzzle.png"
-                    link="https://games.sanjitsarda.com/15puzzle"
-                    properties={{
-                        language: ["JS"],
-                        tools: ["React.js", "Next.js"],
-                        platform: ["RPi"],
-                        types: ["Bored"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="Discord Communications"
-                    description="This is a(probably very slow) communication library that uses discord to communicate between
-                    clients. Its not supposed to make sense or be useful but it is very fun to look at and stuff, so why not. 
-                    Obviously don't use this library if you expect lots of traffic, since it is very slow."
-                    src="https://camo.githubusercontent.com/68ed32620b4b09ff3305c01daa5ae0cbc63f974a3766e2cbb89c024c8ce241db/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3835373733393633363835303535363934382f3835383436343233313435353332363232392f756e6b6e6f776e2e706e67"
-                    link="https://github.com/Sanjit1/discord-communications#readme"
-                    properties={{
-                        language: ["JS"],
-                        tools: ["Electron.js"],
-                        platform: ["RPi"],
-                        types: ["Bored"],
-                    }}
-                    linked={true}
-                />
-                <Card
-                    name="JamesBot  "
-                    description="A bot for UCLA Co26's discord server. It is a work in progress, but it has some cool features like counting, events, and a few other things."
-                    src="https://camo.githubusercontent.com/0262c6095291f94c95c8401c6e550531dfb9b5c7617a4e9c9d389ac8dd6564b0/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3831383232393932353531373539303536312f3936373837303130393635313731383136342f6a616d65732e706e67"
-                    link="https://github.com/Sanjit1/Co26UCLAbot"
-                />
+                {projects.map((project, index) => {
+                    return (
+                        <Card
+                            name={project.name}
+                            description={project.description}
+                            src={project.image}
+                            link={project.link}
+                            properties={project.properties}
+                            linked={true}
+                            key={index}
+                        />
+                    );
+                })}
             </ProjectHolder>
         </div>
     );
